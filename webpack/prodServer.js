@@ -6,7 +6,7 @@ process.env.PWD = process.cwd();
 var publicDir = process.env.PWD + '/public';
 var app = express();
 
-app.use('/dist', express.static(process.env.PWD + '/public'));
+app.use('/dist', express.static(process.env.PWD));
 
 app.get('*', function(req, res) {
   res.sendFile(publicDir + '/index.html');
