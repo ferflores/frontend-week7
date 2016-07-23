@@ -9,9 +9,9 @@
   "scripts": {
     "clean:prod": "rimraf public/dist",
     "build:prod": "npm run clean:prod && npm run webpack:prod",
-    "webpack:prod": "cross-env NODE_ENV=production webpack --config webpack/webpack.config.prod.js",
+    "build": "cross-env NODE_ENV=production webpack --config webpack/webpack.config.prod.js",
     "serve:prod": "node webpack/prodServer.js",
-    "start": "node webpack/devServer.js",
+    "start": "node webpack/prodServer.js",
     "lint": "eslint src"
   },
   "author": "Javier Ponce",
