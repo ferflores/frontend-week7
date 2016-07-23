@@ -4,6 +4,7 @@ var express = require('express');
 process.env.PWD = process.cwd();
 
 var publicDir = process.env.PWD + '/public';
+console.log(publicDir);
 var app = express();
 
 app.use('/dist', express.static(process.env.PWD));
