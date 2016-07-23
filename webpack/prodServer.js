@@ -3,10 +3,10 @@ var express = require('express');
 
 process.env.PWD = process.cwd();
 
-var publicDir = path.join(process.env.PWD, '../public/');
+var publicDir = process.env.PWD + '/public';
 var app = express();
 
-app.use('/dist', express.static(publicDir));
+app.use('/dist', express.static(process.env.PWD + '/public'));
 
 app.get('*', function(req, res) {
   res.sendFile(publicDir + '/index.html');
