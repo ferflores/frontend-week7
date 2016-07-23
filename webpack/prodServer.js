@@ -9,7 +9,7 @@ app.get('*', function(req, res) {
   res.sendFile(publicDir + '/index.html');
 });
 
-app.listen('3000', function(err){
+app.listen('80', function(err){
   if(err) {
     console.log(err);
     return;
