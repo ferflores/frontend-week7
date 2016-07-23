@@ -1,6 +1,9 @@
 var path = require('path');
 var express = require('express');
-var publicDir = path.join(__dirname, '../public/');
+
+process.env.PWD = process.cwd();
+
+var publicDir = path.join(process.env.PWD, '../public/');
 var app = express();
 
 app.use('/dist', express.static(publicDir + 'dist/'));
